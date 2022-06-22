@@ -3,6 +3,7 @@ package PlayersTest;
 import Players.AttackTypes.ProtectionType;
 import Players.AttackTypes.WeaponType;
 import Players.Fighters.Blobby;
+import Rooms.TreasureType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,6 +41,13 @@ public class BlobbyTest {
     public void canChangeWeapon(){
         blobby.setWeaponType(WeaponType.BOW);
         assertEquals(WeaponType.BOW, blobby.getWeaponType());
+    }
+
+    @Test
+    public void canCollectTreasure(){
+        blobby.addTreasureToPlayer(TreasureType.GOLD);
+        assertEquals(1, blobby.getCollectionOfTreasuresCOUNT());
+
     }
 
 }

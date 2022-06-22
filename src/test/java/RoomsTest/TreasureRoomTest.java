@@ -31,6 +31,12 @@ public class TreasureRoomTest {
         assertEquals(TreasureType.GOLD, treasureRoom.getTreasure());
     }
 
+    @Test
+    public void canRemoveTreasure(){
+        treasureRoom.setTreasure(TreasureType.NONE);
+        assertEquals(TreasureType.NONE, treasureRoom.getTreasure());
+    }
+
 
 
 }

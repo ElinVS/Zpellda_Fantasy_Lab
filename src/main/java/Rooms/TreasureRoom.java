@@ -2,7 +2,7 @@ package Rooms;
 
 public class TreasureRoom extends Room{
 
-    private TreasureType treasure;
+    public TreasureType treasure;
 
     public TreasureRoom(String name, TreasureType treasure) {
         super(name);

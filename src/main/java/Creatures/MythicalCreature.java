@@ -6,7 +6,7 @@ public class MythicalCreature extends Creature {
 
 
     public MythicalCreature(String name, String species, int defense) {
-        super(name, species);
+        super(name, species, health);
         this.defense = defense;
     }
 

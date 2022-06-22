@@ -1,12 +1,13 @@
 package Players;
 
+import Behaviours.IFight;
 import Rooms.Room;
 import Rooms.TreasureType;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public abstract class Player {
+public abstract class Player implements IFight {
 
     private String name;
     private int healthPoints;
@@ -21,6 +22,10 @@ public abstract class Player {
         this.level = level;
         this.collectionOfTreasures = new ArrayList<TreasureType>();
         this.roomsVisited = new ArrayList<Room>();
+    }
+
+    public void addTreasureToPlayer(TreasureType treasure){
+        this.collectionOfTreasures.add(treasure);
     }
 
     public String getName() {
@@ -54,6 +59,11 @@ public abstract class Player {
 
     public int getRoomsVisitedCOUNT() {
         return roomsVisited.size();
+    }
+
+    public void collectTreasure(TreasureType somethingShiny) {
+        addTreasureToPlayer(somethingShiny);
+
     }
 
 
