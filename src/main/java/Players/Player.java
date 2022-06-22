@@ -6,7 +6,7 @@ import Rooms.TreasureType;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Player {
+public abstract class Player {
 
     private String name;
     private int healthPoints;
